@@ -1,0 +1,59 @@
+position: fixed;
+
+
+
+
+
+position fixed => 초기 위치에 고정시켜줌. 다른 레이어 상에서 자리잡음.
+top, right, bottom, left => margin과 초기 위치 등이 무시되고 명령한 위치에 자리잡음
+======================================
+#green과 #different를 그냥 만들었을 때 두 box가 위 아래로 겹침 => 서로 동일 레이어에 있기 때문에 박스가 순서대로 쌓임
+#green를 position:fixed 시키고 #different를 그냥 만들었을 때 겹침=>서로
+새로운 레이어에 위치하기 때문에 둘다 첫번째 위치에 자리잡음(#different 박스도 뒷쪽 레이어에서 첫번째 박스)
+
+7
+
+position fixed를 이용하면 스크롤해도 항상 제자리에 머무른다.
+처음 만들어진 자리에 고정 되어있다. 하지만 top, left, right, bottom 중 하나만 수정해도 서로 다른 레이어에 위치하게되어 원래 위치가 무시된다.
+positon fixed를 이용하면 가장 위에 위치하게 된다. (맨 앞)
+
+30
+
+
+
+<!--
+<h1 >Hello!</h1>
+<a href="http://google.com" target = "blank">Go to googole.com</a>
+<img src= "http---" />  self close tag-->
+<!DOCTYPE html>
+<html lang="kr">
+ <head>
+    
+<style>
+    body{
+        
+    }
+      div{
+      background-color: wheat;
+      
+      }
+      #div{
+          background-color: black;
+        
+          position: fixed;
+      }
+</style>
+
+</head>
+
+
+ <body>
+<div>2</div>
+<div id="div">1
+</div>
+
+
+
+ </body>
+
+</html>
